@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="reboot.css">
+    <link rel="stylesheet" href="scheduler-styles.css">
+    <link rel="stylesheet" href="graph.css">
+</head>
+<body>
+<div class="top">
+    <h1 class="header">Scheduler</h1>
+</div>
+<div class="main">
+    <div id="dimonSupaSelectors" class="selectors">
+        <div class="selector_one">
+            <select name="type" class="select">
+                <option selected disabled>Type</option>
+                <option value="Type">Type</option>
+                <option value="One-time">One-time</option>
+                <option value="Annual">Annual</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Daily">Daily</option>
+            </select>
+        </div>
+        <div class="selector_two">
+            <select name="status" class="select">
+                <option selected disabled>Status</option>
+                <option value="Status">Status</option>
+                <option value="Done">Done</option>
+                <option value="Failed">Failed</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <table id="myTable" class="all-info">
+            <thead>
+            <tr class="line">
+                <td class="parameter">Name</td>
+                <td class="parameter">Status</td>
+                <td class="parameter">Type</td>
+                <td class="parameter">Lasting</td>
+                <td class="parameter">Started</td>
+                <td class="parameter">Ended</td>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="select-container">
+        <div id="select" class="w3-bar">
+            <!--            <a class="w3-button">&laquo;</a>-->
+            <!--            <a class="w3-button">&raquo;</a>-->
+        </div>
+    </div>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+    </figure>
+
+</div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="get-req.js"></script>
+<script src="for_selector.js"></script>
+<script src="js-graph.js"></script>
+<script src="require.js"></script>
+<script src="does.js"></script>
+</body>
+</html>

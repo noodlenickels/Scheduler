@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="reboot.css">
+    <link rel="stylesheet" href="scheduler-styles.css">
+    <link rel="stylesheet" href="graph.css">
+</head>
+<body>
+<a class="linking" href="index-new.html">
+    <div class="top">
+        <h1 class="header">Scheduler</h1>
+    </div>
+</a>
+<div class="main">
+    <div class="container-learn">
+        <div class="name-type">
+            <div class="task-name changed-name">Task name</div>
+            <div class="task-type changed-type">Task type</div>
+        </div>
+        <div class="done">Completed</div>
+    </div>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+    </figure>
+</div>
+<div class="schedule">
+    <div class="timing check">History</div>
+    <table id="historyTable" class="all-info">
+        <thead>
+        <tr class="line">
+            <td class="parameter">Name</td>
+            <td class="parameter">Status</td>
+            <td class="parameter">Type</td>
+            <td class="parameter">Lasting</td>
+            <td class="parameter">Started</td>
+            <td class="parameter">Ended</td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+<!--    <div class="w3-bar">-->
+<!--        <a href="#" class="w3-button">&laquo;</a>-->
+<!--        <a href="#" class="w3-button w3-blue">1</a>-->
+<!--        <a href="#" class="w3-button">2</a>-->
+<!--        <a href="#" class="w3-button">3</a>-->
+<!--        <a href="#" class="w3-button">&raquo;</a>-->
+<!--    </div>-->
+    </div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script src="js-one-graph.js"></script>
+<script src="get-req.js"></script>
+<script src="for_selector.js"></script>
+</body>
+</html>
