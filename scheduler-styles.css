@@ -24,8 +24,7 @@ html{
 .container{
     display: flex;
     flex-direction: column;
-    min-height: 605px;
-    gap: 55px;
+    min-height: 650px;
     margin-bottom: 50px;
 }
 .task{
@@ -80,15 +79,14 @@ html{
     width: 100%;
     position: relative;
 }
-.select-container{
-    margin-bottom: 200px;
-}
 .new-select {
     position: relative;
     border: 1px solid #ced4da;
     padding: 10px 30px;
     cursor: pointer;
     user-select: none;
+    min-width: 125px;
+    text-align: center;
 }
 
 .new-select__list {
@@ -160,6 +158,7 @@ tbody{
 }
 th, td {
     padding: 15px;
+    height: 90px;
 }
 thead th:nth-child(1) {
     width: 45%;

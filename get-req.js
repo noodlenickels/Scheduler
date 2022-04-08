@@ -41,7 +41,6 @@ async function getFetch(){
     let response = await fetch(url);
     globalVars.commits = await response.json();
     globalVars.fillPage(globalVars.commits, 0, globalVars.state, 'myTable');
-    //globalVars.fillPage(globalVars.commits, 0, globalVars.state, 'historyTable');
 
     function pagination(event) {
         let number = event.target.getAttribute('data-num');
@@ -52,11 +51,17 @@ async function getFetch(){
 
         globalVars.startPoint = globalVars.ITEMS_PER_PAGE*(number-1);
         console.log(globalVars.state);
-        globalVars.fillPage(globalVars.commits, globalVars.startPoint, globalVars.state, 'myTable'); //здесь была ошибка
+        globalVars.fillPage(globalVars.commits, globalVars.startPoint, globalVars.state, 'myTable');//здесь была ошибка
     }
     let parent = document.querySelector('#select');
     parent.addEventListener('click', pagination);
-    for (let i=0; i < Math.ceil(globalVars.commits.length/globalVars.ITEMS_PER_PAGE); i++)
+    let div1 = document.createElement('div');
+    div1.innerHTML = `<i class="fa-solid fa-angles-left"></i>`
+    div1.classList.add('w3-button');
+    div1.setAttribute('data-num', `1`);
+    parent.appendChild(div1);
+    let val = Math.ceil(globalVars.commits.length/globalVars.ITEMS_PER_PAGE)
+    for (let i=0; i < val; i++)
     {
         let div = document.createElement('div');
         let txt = document.createTextNode(`${i+1}`);
@@ -69,6 +74,11 @@ async function getFetch(){
         div.appendChild(txt);
         parent.appendChild(div);
     }
+    let div2 = document.createElement('div');
+    div2.innerHTML = `<i class="fa-solid fa-angles-right"></i>`
+    div2.classList.add('w3-button');
+    div2.setAttribute('data-num', `${val}`);
+    parent.appendChild(div2);
 }
 getFetch();
 
@@ -107,3 +117,5 @@ function addRow(id, elem){
     row.appendChild(clmn6)
     tbody.appendChild(row)
 }
+
+console.log(document.getElementById('myTable'));
