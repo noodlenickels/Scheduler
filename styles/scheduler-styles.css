@@ -1,9 +1,16 @@
+:root {
+    --colorOne: #0d0d52;
+    --colorTwo: #e9ebef;
+    --colorThree: #303D74;
+    --colorFour: #0D0E11;
+}
 html{
     font-family: Roboto;
     font-size: 16px;
+
 }
 .top{
-    background: #0d0d52;
+    background: var(--colorOne);
     background-size: 100%;
 }
 .header{
@@ -12,7 +19,7 @@ html{
     font-size: 65px;
 }
 .selectors{
-    display: flex;
+    display: none;
     margin-bottom: 100px;
 }
 .selector_one{
@@ -39,6 +46,9 @@ html{
 .row{
     display: flex;
     gap: 150px;
+}
+.w3-blue{
+    background-color: var(--colorThree)!important;
 }
 .task-top{
     display: flex;
@@ -78,6 +88,9 @@ html{
     display: block;
     width: 100%;
     position: relative;
+}
+.highcharts{
+    min-width: 100%;
 }
 .new-select {
     position: relative;
@@ -159,6 +172,7 @@ tbody{
 th, td {
     padding: 15px;
     height: 90px;
+    color: var(--colorFour);
 }
 thead th:nth-child(1) {
     width: 45%;
@@ -182,7 +196,7 @@ thead th:nth-child(5) {
     width: 10%;
 }
 tbody tr:nth-child(odd) {
-    background-color: #e9ebef;
+    background-color: var(--colorTwo);
 }
 
 tbody tr:nth-child(even) {

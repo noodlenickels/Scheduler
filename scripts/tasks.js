@@ -33,7 +33,7 @@ class Schedule{
         let tbody = document.getElementById(id).getElementsByTagName("tbody")[0];
         let row = document.createElement("tr")
         let clmn1 = document.createElement("td")
-        let ssylka = '<a href="learn_more.html" class="linking">~</a>'
+        let ssylka = '<a href="../learn_more.html" class="linking">~</a>'
         clmn1.insertAdjacentHTML(
             'afterbegin',
             ssylka

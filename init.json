@@ -131,5 +131,24 @@
       "start": "01.01.2011 00:00:00",
       "end": "14.02.2015 00:00:00"
     }
+  ],
+  "filters": [
+    {
+      "id": 1,
+      "disabled": "Type",
+      "Type": "Select-All",
+      "One-time": "One-time",
+      "Annual": "Annual",
+      "Monthly": "Monthly",
+      "Weekly": "Weekly",
+      "Daily": "Daily"
+    },
+    {
+      "id": 2,
+      "disabled": "Status",
+      "Status": "Select all",
+      "Done": "Done",
+      "Failed": "Failed"
+    }
   ]
 }
